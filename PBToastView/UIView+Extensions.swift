@@ -9,9 +9,9 @@ import UIKit
 import Foundation
 
 extension UIView {
-    func showMessage(_ message : String , direction : Direction)
+    func showMessage(_ type : MessageType , message : String , direction : Direction)
     {
         let msgView = PBMessageView()
-        msgView.showMessage(messageType: .Error, message, view: self, direction: direction)
+        msgView.showMessage(messageType: type, message, view: self, direction: direction)
     }
 }

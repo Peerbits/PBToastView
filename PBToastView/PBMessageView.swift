@@ -128,7 +128,10 @@ public class PBMessageView: UIView {
         //let frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 60)
         var statusBarMessageView = PBMessageView()
         statusBarMessageView = PBMessageView(frame: view.frame, messageType: messageType, message: message,direction: direction)
-        view.addSubview(statusBarMessageView)
+        
+        UIApplication.shared.keyWindow?.addSubview(statusBarMessageView)
+        
+//        view.addSubview(statusBarMessageView)
         view.layoutIfNeeded()
         view.layoutSubviews()
     }

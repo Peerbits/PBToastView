@@ -10,16 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.perform(#selector(showErrorMessage), with: nil, afterDelay: 3.0)
     }
 
-    @objc func showErrorMessage() {
+    @IBAction func btnErrorClicked(_ sender: UIButton) {
         
-        self.view.showMessage("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", direction: .Bottom)
+        self.view.showMessage(.Error, message: "This is error", direction: .Bottom)
+        
+    }
+    
+    @IBAction func btnSuccessClicked(_ sender: UIButton) {
+        
+        self.view.showMessage(.Success, message: "This is Success", direction: .Bottom)
+        
+    }
+    
+    @IBAction func btnWarningClicked(_ sender: UIButton) {
+        
+        self.view.showMessage(.Warning, message: "This is Warning", direction: .Bottom)
+        
     }
 }
 
